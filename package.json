@@ -1,5 +1,5 @@
 {
-  "name": "marked",
+  "name": "@onparallel/marked-do-not-use",
   "description": "A markdown parser built for speed",
   "author": "Christopher Jeffrey",
   "version": "12.0.2",
@@ -36,7 +36,7 @@
   "publishConfig": {
     "provenance": true
   },
-  "repository": "git://github.com/markedjs/marked.git",
+  "repository": "git://github.com/onparallel/marked.git",
   "homepage": "https://marked.js.org",
   "bugs": {
     "url": "http://github.com/markedjs/marked/issues"
