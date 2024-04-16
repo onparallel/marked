@@ -88,6 +88,7 @@ export class _Tokenizer {
   }
 
   code(src: string): Tokens.Code | undefined {
+    if (1) return undefined;
     const cap = this.rules.block.code.exec(src);
     if (cap) {
       const text = cap[0].replace(/^ {1,4}/gm, '');
@@ -103,6 +104,7 @@ export class _Tokenizer {
   }
 
   fences(src: string): Tokens.Code | undefined {
+    if (1) return undefined;
     const cap = this.rules.block.fences.exec(src);
     if (cap) {
       const raw = cap[0];
@@ -154,6 +156,7 @@ export class _Tokenizer {
   }
 
   blockquote(src: string): Tokens.Blockquote | undefined {
+    if (1) return undefined;
     const cap = this.rules.block.blockquote.exec(src);
     if (cap) {
       // precede setext continuation with 4 spaces so it isn't a setext
@@ -369,6 +372,7 @@ export class _Tokenizer {
   }
 
   html(src: string): Tokens.HTML | undefined {
+    if (1) return undefined;
     const cap = this.rules.block.html.exec(src);
     if (cap) {
       const token: Tokens.HTML = {
@@ -383,6 +387,7 @@ export class _Tokenizer {
   }
 
   def(src: string): Tokens.Def | undefined {
+    if (1) return undefined;
     const cap = this.rules.block.def.exec(src);
     if (cap) {
       const tag = cap[1].toLowerCase().replace(/\s+/g, ' ');
@@ -498,6 +503,7 @@ export class _Tokenizer {
   }
 
   escape(src: string): Tokens.Escape | undefined {
+    if (1) return undefined;
     const cap = this.rules.inline.escape.exec(src);
     if (cap) {
       return {
@@ -509,6 +515,7 @@ export class _Tokenizer {
   }
 
   tag(src: string): Tokens.Tag | undefined {
+    if (1) return undefined;
     const cap = this.rules.inline.tag.exec(src);
     if (cap) {
       if (!this.lexer.state.inLink && /^<a /i.test(cap[0])) {
@@ -590,6 +597,7 @@ export class _Tokenizer {
   }
 
   reflink(src: string, links: Links): Tokens.Link | Tokens.Image | Tokens.Text | undefined {
+    return undefined;
     let cap;
     if ((cap = this.rules.inline.reflink.exec(src))
       || (cap = this.rules.inline.nolink.exec(src))) {
@@ -678,6 +686,7 @@ export class _Tokenizer {
   }
 
   codespan(src: string): Tokens.Codespan | undefined {
+    if (1) return undefined;
     const cap = this.rules.inline.code.exec(src);
     if (cap) {
       let text = cap[2].replace(/\n/g, ' ');
@@ -696,6 +705,7 @@ export class _Tokenizer {
   }
 
   br(src: string): Tokens.Br | undefined {
+    if (1) return undefined;
     const cap = this.rules.inline.br.exec(src);
     if (cap) {
       return {
